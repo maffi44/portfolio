@@ -3,142 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
+    <title>Timofey Molokov - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f4f4f4;
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            line-height: 1.6;
         }
-        h1, h2 {
-            color: #333;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        .category {
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            border-radius: 10px;
             margin-bottom: 40px;
         }
-        .category img {
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #f4f4f4;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header h2 {
+            font-size: 1.5em;
+            color: #a0a0a0;
+            margin: 10px 0;
+        }
+        .project {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            background: #252525;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .project-description {
+            flex: 1;
+        }
+        .project img {
             max-width: 300px;
             margin-left: 20px;
-            vertical-align: top;
+            border-radius: 5px;
         }
-        .description {
-            display: inline-block;
-            max-width: 600px;
+        .project h2 {
+            margin-top: 0;
+            color: #00b4d8;
         }
-        .additional-skills {
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, #00b4d8, transparent);
+            margin: 40px 0;
+        }
+        .additional-skills, .contact {
             margin-top: 40px;
+            text-align: center;
         }
-        .contact {
-            margin-top: 40px;
-            font-style: italic;
+        a {
+            color: #00b4d8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>Game Developer Portfolio</h1>
-    <p>Specializing in 4D engines, rendering, physics, and multiplayer systems. Below are my key skills with demos from various projects.</p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="path/to/your/photo.jpg" alt="Timofey Molokov">
+            <h1>Timofey Molokov</h1>
+            <h2>Game Developer, Freelance Programmer</h2>
+            <p>Specializing in 4D engines, physics, and multiplayer systems</p>
+        </div>
 
-    <div class="category">
-        <h2>Rendering</h2>
-        <div class="description">
-            <p>Developed advanced rendering solutions, including 4D visualization using SDF (Signed Distance Field) raymarching and real-time terrain editing with custom Vertex/Fragment shaders for web and mobile platforms.</p>
+        <!-- Project 1: 4D Shooter -->
+        <div class="project">
+            <div class="project-description">
+                <h2>Personal Project: 4D Shooter</h2>
+                <p><strong>Technologies:</strong> Rust, custom 4D engine</p>
+                <p><strong>Target Platforms:</strong> Windows, Linux, Web</p>
+                <p><strong>Project Description:</strong> A multiplayer competitive arena shooter set in 4D space</p>
+                <p><strong>What I Did:</strong></p>
+                <ul>
+                    <li>Developed a 4D engine from scratch.</li>
+                    <li>Implemented a level loading system.</li>
+                    <li>Added 4D physics with collision detection.</li>
+                    <!-- Add more achievements later -->
+                </ul>
+            </div>
+            <img src="gifs/destructible.gif" alt="4D Shooter GIF">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Project 2: Terrain Editor -->
+        <div class="project">
+            <div class="project-description">
+                <h2>Terrain Editor for mexc.com</h2>
+                <p><strong>Technologies:</strong> Godot, custom shaders</p>
+                <p><strong>Target Platforms:</strong> Web, Mobile</p>
+                <p><strong>Project Description:</strong> A real-time terrain editing tool</p>
+                <p><strong>What I Did:</strong></p>
+                <ul>
+                    <li>Created a pseudo-voxel terrain editor.</li>
+                    <!-- Add more details later -->
+                </ul>
+            </div>
+            <img src="gifs/mechterrain.gif" alt="Terrain Editor GIF">
+        </div>
+
+        <!-- Add other projects here -->
+
+        <div class="divider"></div>
+
+        <!-- Additional Skills -->
+        <div class="additional-skills">
+            <h2>Additional Skills</h2>
             <ul>
-                <li><strong>4D Rendering (SDF Raymarching)</strong> – Implemented in <em>4D Shooter</em></li>
-                <li><strong>Real-time Terrain Editor</strong> – Developed for <em>mexc.com (Godot)</em></li>
+                <li>Engine development in Rust</li>
+                <li>Combat system design in Unreal Engine</li>
+                <!-- Rewrite later -->
             </ul>
         </div>
-        <img src="gifs/render.gif" alt="4D Rendering GIF">
-        <img src="gifs/mechterrain.gif" alt="Terrain Editor GIF">
-    </div>
 
-    <div class="category">
-        <h2>Physics</h2>
-        <div class="description">
-            <p>Implemented a custom 4D physics engine with collision detection based on SDF for 4D objects, as well as physics systems for VR games. Also developed destructible environments.</p>
-            <ul>
-                <li><strong>4D Physics & Collision Detection</strong> – Created for <em>4D Shooter</em></li>
-                <li><strong>VR Physics</strong> – Configured for <em>Unity VR Shooter</em></li>
-                <li><strong>Destructible Environments</strong> – Featured in <em>4D Shooter</em></li>
-            </ul>
+        <!-- Contact -->
+        <div class="contact">
+            <p>Contact me: <a href="mailto:maffi44maffi44@gmail.com">maffi44maffi44@gmail.com</a> | <a href="https://github.com/maffi44">GitHub</a></p>
         </div>
-        <img src="gifs/physics.gif" alt="4D Physics GIF">
-        <img src="gifs/destructible.gif" alt="Destructible Environments GIF">
-    </div>
-
-    <div class="category">
-        <h2>Engine Development</h2>
-        <div class="description">
-            <p>Built a custom 4D game engine from scratch, handling rendering, physics, and networking. Additionally, developed a game engine in Rust for a commercial project.</p>
-            <ul>
-                <li><strong>4D Game Engine</strong> – Developed for <em>4D Shooter</em></li>
-                <li><strong>Rust Game Engine</strong> – Created for <em>mexc.com</em></li>
-            </ul>
-        </div>
-        <img src="gifs/destructible.gif" alt="Engine Demo GIF">
-    </div>
-
-    <div class="category">
-        <h2>Gameplay Programming</h2>
-        <div class="description">
-            <p>Designed and implemented gameplay mechanics for various projects, including 4D multiplayer shooters, VR co-op games, and top-down mobile shooters. Expertise in character controllers, animation systems, and combat mechanics.</p>
-            <ul>
-                <li><strong>4D Gameplay & Capture the Flag</strong> – Implemented in <em>4D Shooter</em></li>
-                <li><strong>Character Controller & Combat System</strong> – Developed for <em>Unreal Engine project</em></li>
-                <li><strong>VR Gameplay</strong> – Created for <em>Unity VR Shooter</em></li>
-                <li><strong>Top-Down Shooter Gameplay</strong> – Fully programmed for <em>Dragon Destiny (Unreal)</em></li>
-            </ul>
-        </div>
-        <img src="gifs/netcode.gif" alt="4D Gameplay GIF">
-        <img src="gifs/anotherworld.gif" alt="VR Gameplay GIF">
-    </div>
-
-    <div class="category">
-        <h2>Networking</h2>
-        <div class="description">
-            <p>Implemented multiplayer networking with lag compensation techniques such as prediction, interpolation, and extrapolation. Also developed a game server and matchmaking system.</p>
-            <ul>
-                <li><strong>Multiplayer Networking & Lag Compensation</strong> – Integrated into <em>4D Shooter</em></li>
-            </ul>
-        </div>
-        <img src="gifs/netcode.gif" alt="Multiplayer GIF">
-    </div>
-
-    <div class="category">
-        <h2>Procedural Generation</h2>
-        <div class="description">
-            <p>Created tools for real-time procedural generation, including a building editor that auto-generates floors and details based on user-defined boxes, and a level generator that applies textures based on prompts.</p>
-            <ul>
-                <li><strong>Building Editor</strong> – Developed for <em>mexc.com (Godot)</em></li>
-                <li><strong>Prompt-based Level Generation</strong> – Prototype for <em>mexc.com (Godot)</em></li>
-            </ul>
-        </div>
-        <img src="gifs/mechbuildings.gif" alt="Building Editor GIF">
-        <img src="gifs/mechgen.gif" alt="Level Generation GIF">
-    </div>
-
-    <div class="category">
-        <h2>AI</h2>
-        <div class="description">
-            <p>Configured AI systems for enemies in a cooperative VR shooter, handling behavior and interactions with players.</p>
-            <ul>
-                <li><strong>Enemy AI</strong> – Implemented in <em>Unity VR Shooter</em></li>
-            </ul>
-        </div>
-        <img src="gifs/anotherworld.gif" alt="AI GIF">
-    </div>
-
-    <div class="additional-skills">
-        <h2>Additional Skills</h2>
-        <ul>
-            <li>Engine development in Rust</li>
-            <li>Combat system design in Unreal Engine</li>
-            <li>Game design and full-cycle development (e.g., <em>Dragon Destiny</em>)</li>
-        </ul>
-    </div>
-
-    <div class="contact">
-        <p>Contact me at <a href="mailto:your-email@example.com">your-email@example.com</a> or find me on <a href="https://github.com/your-username">GitHub</a>.</p>
     </div>
 </body>
-</html>
