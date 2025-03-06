@@ -8,7 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             background-color: #1a1a1a;
             color: #f4f4f4;
             line-height: 1.6;
@@ -19,7 +19,7 @@
         }
         .header {
             text-align: center;
-            padding: 40px 0;
+            padding: 15px 0;
             background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
             border-radius: 10px;
             margin-bottom: 40px;
@@ -104,28 +104,32 @@
         a:hover {
             text-decoration: underline;
         }
-        /* .hire-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #00c4e8;
-            color: #1a1a1a;
-            border-radius: 5px;
-            text-decoration: none;
-        } */
         @media (max-width: 768px) {
+            body {
+                line-height: 1.36;
+            }
+            .header p {
+                padding: 0 20px; /* Увеличенные отступы для хедера */
+                max-width: 100%;
+            }
             .project {
                 flex-direction: column;
+                padding: 10px;
             }
             .project-text {
-                padding-right: 0;
+                padding-right: 0px; /* Уменьшенные отступы для текста проектов */
+                padding-left: 0px;
                 margin-bottom: 20px;
+                min-width: 0; /* Убираем min-width для адаптивности */
             }
             .project-gifs {
                 flex: 1;
                 width: 100%;
             }
-            .header p {
-                max-width: 100%;
+            .project-gifs img {
+                max-width: 100%; /* GIF масштабируются до ширины контейнера */
+                width: 100%; /* Полная ширина с учётом отступов */
+                box-sizing: border-box; /* Учитываем padding в ширине */
             }
         }
     </style>
@@ -138,15 +142,13 @@
             <h1>Timofey Molokov</h1>
             <h2>Game Developer Portfolio</h2>
             <p>I’m a game developer and programmer with over 6 years of experience, tackling complex challenges across various platforms. I’ve built games using Unreal Engine, Unity, and Godot, and developed custom engines and physics systems in Rust. With a background in low-level programming, shader development, and computer graphics, I also bring an artistic perspective from my architectural education. Currently freelancing and open to exciting projects.</p>
-            <!-- <p>Currently freelancing and open to exciting projects.</p> -->
-            <!-- <p><strong>Contact:</strong> <a href="mailto:maffi44maffi44@gmail.com">Email</a> | <a href="https://github.com/maffi44">GitHub</a> | <a href="https://linkedin.com/in/timofei-molokov-1978961a4">LinkedIn</a> | <a href="https://t.me/maffi44">Telegram</a></p> -->
         </div>
 
         <!-- Project 1: 4D Shooter -->
         <div class="project">
             <div class="project-text">
                 <h2>4D Shooter</h2>
-                <p><strong>Client:</strong> Personal Project</p>
+                <p><strong>Client:</strong> Personal Project (solo developer)</p>
                 <p><strong>Duration:</strong> May 2023 - Present (2 years)</p>
                 <p><strong>Technologies:</strong> Rust, custom 4D engine</p>
                 <p><strong>Target Platforms:</strong> Windows, Linux, macOS, Web</p>
@@ -285,7 +287,7 @@
                 <ul>
                     <li>Developed AI for enemy monsters with dynamic behavior.</li>
                     <li>Configured physics for realistic monster interactions.</li>
-                    <li>Built a movement controller for enemies in VR space.</li>
+                    <li>Built a movement controller for enemies.</li>
                     <li>Created animations synced with AI actions.</li>
                 </ul>
             </div>
@@ -328,10 +330,9 @@
             <p><strong>Game Engines:</strong> Unreal Engine, Unity, Godot</p>
             <p><strong>Programming Languages:</strong> Rust, C#, C, Godot Script</p>
             <p><strong>Graphics & APIs:</strong> OpenGL, WebGL, WebGPU, DirectX, Vulkan (via Rust WGPU), shaders (SDF, raymarching)</p>
-            <p><strong>Other:</strong> Custom engine development, physics systems, game design, level design, art direction</p>
+            <p><strong>Other:</strong> Custom engine development, physics systems, game design, level design, art</p>
             <p><strong>Availability:</strong> Open to freelance projects and remote opportunities</p>
             <p><strong>Contact:</strong> <a href="mailto:maffi44maffi44@gmail.com">Email</a> | <a href="https://github.com/maffi44">GitHub</a> | <a href="https://linkedin.com/in/timofei-molokov-1978961a4">LinkedIn</a> | <a href="https://t.me/maffi44">Telegram</a></p>
-            <!-- <p><a href="mailto:maffi44maffi44@gmail.com" class="hire-button">Hire Me</a></p> -->
         </div>
     </div>
 </body>
